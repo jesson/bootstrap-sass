@@ -5,7 +5,7 @@ module Sass::Script::Functions
     #  ::Sass::Script::String.new sprockets_context.image_path(source.value).to_s, :string
     #elsif defined?(::Compass)
     if defined?(::Compass)
-      image_url(source, Sass::Script::Bool.new(true))
+      image_url(source)
     else
       # Revert to the old compass-agnostic path determination
       asset_sans_quotes = source.value.gsub('"', '')
